@@ -1,0 +1,263 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* 彈出框 */
+.modal {
+  display: none; /* 初始隱藏 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#loginForm label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+#loginForm input {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+#loginForm button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#loginForm button:hover {
+  background: #0056b3;
+}
+
+/* 其他已有的樣式 */
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://scontent-tpe1-1.xx.fbcdn.net/v/t39.30808-6/472039261_2080106612436158_8333303473631066009_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=f727a1&_nc_ohc=n-_IqupZEmgQ7kNvgFXkSDf&_nc_zt=23&_nc_ht=scontent-tpe1-1.xx&_nc_gid=APoR6xhm-CIFwl_j5gFp3Aw&oh=00_AYCZhdldZnnauwmO3tKUhuoYp_QP68XyspyH5oT3H-8ZnQ&oe=677AB897');
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.welcome-title {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: fadeInTitle 2s ease;
+}
+
+.welcome-subtitle {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  animation: fadeInSubtitle 3s ease;
+}
+
+.welcome-scroll-down-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ffffffaa;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.welcome-scroll-down-btn:hover {
+  background: #ffffff;
+  transform: scale(1.1); /* 按鈕放大效果 */
+}
+
+/* Animation */
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSubtitle {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 滑鼠跟隨物件樣式 */
+.mouse-follower {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  font-size: 1.5rem;
+  pointer-events: none;
+  transition: all 0.1s ease-out;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #E0E0E0;
+}
+
+h1 {
+    font-size: 2em; 
+    font-weight: bold; 
+    line-height: 1.2;
+    margin: 0;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    color: #7D7DFF; 
+    text-align: center;
+    animation: fadeInTitle 2s ease-in-out; 
+}
+
+h3 {
+    font-size: 2em; 
+    font-weight: bold; 
+    line-height: 1.2;
+    margin: 0;
+    text-align: left;
+}
+
+header {
+    background: linear-gradient(to right, #B9B9FF, #000000, #B9B9FF);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header h2 {
+    margin: 10px 0;
+    font-size: 2em;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    background: white;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#home h2, #about h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+p {
+    line-height: 1.5;
+    margin: 0;
+}
+
+article {
+    background: #fff;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article h4 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    background: #333;
+    color: #fff;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    align-items: center;
+}
+
+.happy {
+    width: 800px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.bdcard {
+    width: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.bdcard img {
+    display: block;
+    width: 100%;
+}
+
+.bdtext {
+    padding: 20px 20px 0px 0px;
+}
+
+ul{
+    line-height: 1.5;
+    margin: 0;
+}
